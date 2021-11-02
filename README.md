@@ -1,3 +1,14 @@
+[1.1]: http://i.imgur.com/tXSoThF.png (twitter icon with padding)
+[2.1]: http://i.imgur.com/P3YfQoD.png (facebook icon with padding)
+[3.1]: http://i.imgur.com/yCsTjba.png (google plus icon with padding)
+[4.1]: http://i.imgur.com/0o48UoR.png (github icon with padding)
+    
+
+[1]: https://www.twitter.com/MasSakti_
+[2]: https://www.facebook.com/MasSakti477
+[3]: https://www.instagram.com/mas.sakti_/?hl=id
+[4]: https://github.com/MasSakti
+
 # Scan It!
 
 <img src="app/src/main/res/drawable-xxxhdpi/qrcodelogo.png" align="left"
@@ -62,5 +73,11 @@ wallabag app is a free and open source project developed by volunteers. Any cont
 ## Contact
 
 191111041 - Muhammad Mutawalli Sya'rawi   [@mas.sakti_](https://www.instagram.com/mas.sakti_/)
+    
+[![alt text][1.1]][1]
+[![alt text][2.1]][2]
+[![alt text][3.1]][3]
+[![alt text][4.1]][4]
 
 Project Link: [Scan It!](https://github.com/MasSakti/ScanIt)
+    
