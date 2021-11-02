@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Scan It! - 191111041_Muhammad Mutawalli Sya\'rawi</string>
+
+    <string name="txt_email">191111041@gmail.com</string>
+    <string name="txt_ig">mas.sakti_</string>
+
+    <string name="reserved">©2021 Stiki Malang - Mutawalli Syar\'awi All rights reserved.</string>
+    <string name="penjelasan">Aplikasi ini digunakan untuk melakukan scan
+        dan generate QR Code dan mendirect tujuan QR Code tersebut.</string>
+
+    <string name="desc1">Di menu ini, kita bisa melakukan scan QR Code dengan camera atau dari gambar yang diambil di gallery.</string>
+    <string name="desc12">Tekan tombol "Scan QR Code" untuk melakukan scan dengan camera lalu hasilnya akan dimunculkan dalam popup.
+        Selanjutnya kita diberi pilihan untuk direct ke alamat QR ataupun tidak.</string>
+    <string name="desc13">Tekan tombol "Get From Gallery" untuk melakukan scan dengan mengambil gambar yang ada didalam gallery
+        lalu hasilnya akan dimunculkan dalam popup.
+        Selanjutnya kita diberi pilihan untuk direct ke alamat QR ataupun tidak.</string>
+
+    <string name="desc2">Di menu ini, kita bisa mengenerate QR Code kita sendiri lalu menyimpannya didalam gallery.</string>
+    <string name="desc22">Masukkan input pada bar yang sudah disediakan. Jika sudah, tekan tombol "Generate QR"
+        untuk menghasilkan QR Code yang sudah di generate.</string>
+    <string name="desc23">Tekan tombol "Save QR Code" untuk menyimpan hasil generate QR. Jika berhasil, maka akan ada pemberitahuan bahwa QR berhasil disimpan.</string>
+    <string name="tutor">Masih bingung dengan penggunaan aplikasi dan fitur yang ada? Lihat video demonya DISINI</string>
+    <string name="feedback">Kirimkan feedback agar aplikasi ini dapat berkembang DISINI</string>
+</resources>
