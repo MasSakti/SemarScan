@@ -1,4 +1,4 @@
-package com.mutawalli.uts.scanit;
+package com.mutawalli.semar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.mutawalli.semar.R;
 
 public class MainActivity extends AppCompatActivity {
     private CardView scan,gene,about,help;
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(com.mutawalli.uts.scanit.MainActivity.this, Scan.class);
+                Intent intent = new Intent(MainActivity.this, Scan.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         gene.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(com.mutawalli.uts.scanit.MainActivity.this, Generate.class);
+                Intent intent = new Intent(MainActivity.this, Generate.class);
                 startActivity(intent);
             }
         });
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(com.mutawalli.uts.scanit.MainActivity.this, About.class);
+                Intent intent = new Intent(MainActivity.this, About.class);
                 startActivity(intent);
             }
         });
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(com.mutawalli.uts.scanit.MainActivity.this, Help.class);
+                Intent intent = new Intent(MainActivity.this, Help.class);
                 startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.mutawalli.uts.scanit;
+package com.mutawalli.semar;
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 

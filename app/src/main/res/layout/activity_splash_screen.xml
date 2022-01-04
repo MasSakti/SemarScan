@@ -5,14 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login"
-    tools:context=".SplashScreen">
+    android:background="@drawable/background_login3"
+    tools:context="com.mutawalli.semar.SplashScreen">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingLeft="10dp"
         android:foregroundGravity="center_horizontal"
-        android:src="@drawable/scanit_logo"/>
+        android:src="@drawable/semar_logo"/>
 
     <ProgressBar
         android:id="@+id/progressBar1"

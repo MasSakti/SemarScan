@@ -1,10 +1,12 @@
-package com.mutawalli.uts.scanit;
+package com.mutawalli.semar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.mutawalli.semar.R;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -30,7 +32,7 @@ public class SplashScreen extends AppCompatActivity {
                 finally
                 {
                     finish();
-                    Intent m = new Intent(com.mutawalli.uts.scanit.SplashScreen.this, MainActivity.class);
+                    Intent m = new Intent(SplashScreen.this, MainActivity.class);
                     startActivityForResult(m,0);
                 }
             }

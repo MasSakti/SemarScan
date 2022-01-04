@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login"
+    android:background="@drawable/background_login3"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".About">
+    tools:context="com.mutawalli.semar.About">
 
     <TextView
         android:id="@+id/txt_profil"

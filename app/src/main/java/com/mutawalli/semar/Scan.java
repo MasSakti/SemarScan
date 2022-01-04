@@ -1,4 +1,4 @@
-package com.mutawalli.uts.scanit;
+package com.mutawalli.semar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -22,6 +22,7 @@ import com.google.zxing.Result;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.mutawalli.semar.R;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -39,7 +40,7 @@ public class Scan extends AppCompatActivity {
     public void btnscan(View view) {
         //Intent integrator
         IntentIntegrator intentIntegrator = new IntentIntegrator(
-                com.mutawalli.uts.scanit.Scan.this
+                Scan.this
         );
         //Prompt Text
         intentIntegrator.setPrompt("Gunakan Tombol Volume Atas Untuk Menghidupkan Flash");
@@ -48,7 +49,24 @@ public class Scan extends AppCompatActivity {
         //Locked Orientation
         intentIntegrator.setOrientationLocked(true);
         //Capture Activity
-        intentIntegrator.setCaptureActivity(com.mutawalli.uts.scanit.Capture.class);
+        intentIntegrator.setCaptureActivity(Capture.class);
+        //Initiate Scan
+        intentIntegrator.initiateScan();
+    }
+
+    public void btnbar(View view) {
+        //Intent integrator
+        IntentIntegrator intentIntegrator = new IntentIntegrator(
+                Scan.this
+        );
+        //Prompt Text
+        intentIntegrator.setPrompt("Gunakan Tombol Volume Atas Untuk Menghidupkan Flash");
+        //Beep
+        intentIntegrator.setBeepEnabled(true);
+        //Locked Orientation
+        intentIntegrator.setOrientationLocked(true);
+        //Capture Activity
+        intentIntegrator.setCaptureActivity(CaptureBar.class);
         //Initiate Scan
         intentIntegrator.initiateScan();
     }
@@ -70,7 +88,7 @@ public class Scan extends AppCompatActivity {
             //Condition
             if (intentResult.getContents() != null) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(
-                        com.mutawalli.uts.scanit.Scan.this
+                        Scan.this
                 );
                 builder.setTitle("Hasil Scan");
                 if (intentResult.getContents().startsWith("https://goo.gl/maps/")) {
@@ -81,8 +99,10 @@ public class Scan extends AppCompatActivity {
                     builder.setMessage("Data QR \n" + intentResult.getContents() + "\n\n Tipe : Nomor Telephone" + "\n\n" + "Hubungi Nomor Tersebut ?");
                 } else if (intentResult.getContents().startsWith("https://")) {
                     builder.setMessage("Data QR \n" + intentResult.getContents() + "\n\n Tipe : Web" + "\n\n" + "Kunjungi Alamat URL Tersebut ?");
+                } else if (intentResult.getContents().startsWith("8")) {
+                    builder.setMessage("Data Barcode \n" + intentResult.getContents() + "\n\n Tipe : Produk" + "\n\n" + "Cari Produk Tersebut ?");
                 } else {
-                    builder.setMessage("Data QR \n" + intentResult.getContents() + "\n\n Tipe : Kode/Nomor" + "\n\n" + "Sebarkan Kode/Nomer Tersebut ?");
+                    builder.setMessage("Data QR \n" + intentResult.getContents() + "\n\n Tipe : Kode/Nomor/Teks" + "\n\n" + "Sebarkan Kode/Nomer/Teks Tersebut ?");
                 }
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
@@ -103,6 +123,9 @@ public class Scan extends AppCompatActivity {
                             startActivity(go);
                         } else if (intentResult.getContents().startsWith("https://")) {
                             Intent go = new Intent(Intent.ACTION_VIEW, Uri.parse(intentResult.getContents()));
+                            startActivity(go);
+                        } else if (intentResult.getContents().startsWith("8")) {
+                            Intent go = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=produk+" + intentResult.getContents()));
                             startActivity(go);
                         } else {
                             Intent sendIntent = new Intent();
@@ -146,7 +169,7 @@ public class Scan extends AppCompatActivity {
                         contents = result.getText();
                         //Toast.makeText(getApplicationContext(), contents, Toast.LENGTH_LONG).show();
                         AlertDialog.Builder builder = new AlertDialog.Builder(
-                                com.mutawalli.uts.scanit.Scan.this
+                                Scan.this
                         );
                         builder.setTitle("Hasil Scan");
                         if (contents.startsWith("https://goo.gl/maps/")) {
@@ -206,11 +229,11 @@ public class Scan extends AppCompatActivity {
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
-                    Toast.makeText(com.mutawalli.uts.scanit.Scan.this, "Something went wrong", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Scan.this, "Something went wrong", Toast.LENGTH_LONG).show();
                 }
 
             } else {
-                Toast.makeText(com.mutawalli.uts.scanit.Scan.this, "You haven't picked Image", Toast.LENGTH_LONG).show();
+                Toast.makeText(Scan.this, "Gambar Belum Dipilih!", Toast.LENGTH_LONG).show();
             }
         }
 

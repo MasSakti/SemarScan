@@ -1,5 +1,7 @@
-package com.mutawalli.uts.scanit;
+package com.mutawalli.semar;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,27 +11,49 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.mutawalli.semar.R;
+
+import java.util.Arrays;
+
 public class Help extends AppCompatActivity {
     private Button mBack;
+    String[] value = new String[]{"Blue Sky", "Sunny Orange", "Dark Purple"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
-
-
+        ScrollView bgcolor = (ScrollView) findViewById(R.id.help_bgcolor);
         mBack = (Button) findViewById(R.id.about_btn_kembali);
         mBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                AlertDialog.Builder alertdialogbuilder = new AlertDialog.Builder(Help.this);
+                alertdialogbuilder.setTitle("Choose Your Colors");
+                alertdialogbuilder.setItems(value, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String selectedText = Arrays.asList(value).get(which);
+                        if (selectedText == "Blue Sky") {
+                            bgcolor.setBackgroundResource(R.drawable.background_login);
+                        } else if (selectedText == "Sunny Orange") {
+                            bgcolor.setBackgroundResource(R.drawable.background_login2);
+                        } else if (selectedText == "Dark Purple") {
+                            bgcolor.setBackgroundResource(R.drawable.background_login3);
+                        } else {
+                            throw new java.lang.RuntimeException("Something Bad Just Happen");
+                        }
+                    }
+                });
+                AlertDialog dialog = alertdialogbuilder.create();
+                dialog.show();
             }
         });
 

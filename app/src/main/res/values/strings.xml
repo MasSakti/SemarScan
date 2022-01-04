@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Scan It! - 191111041_Muhammad Mutawalli Sya\'rawi</string>
+    <string name="app_name">Semar - Scan &amp; Generate</string>
 
     <string name="txt_email">191111041@gmail.com</string>
     <string name="txt_ig">mas.sakti_</string>
@@ -21,4 +21,6 @@
     <string name="desc23">Tekan tombol "Save QR Code" untuk menyimpan hasil generate QR. Jika berhasil, maka akan ada pemberitahuan bahwa QR berhasil disimpan.</string>
     <string name="tutor">Masih bingung dengan penggunaan aplikasi dan fitur yang ada? Lihat video demonya DISINI</string>
     <string name="feedback">Kirimkan feedback agar aplikasi ini dapat berkembang DISINI</string>
+
+    <string name="help_kembali">(WIP)Change Your Theme Color ?</string>
 </resources>

@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_login"
-    tools:context=".Scan">
+    android:background="@drawable/background_login3"
+    tools:context="com.mutawalli.semar.Scan">
 
     <Button
         android:id="@+id/btn_scan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_bar"
         android:layout_centerInParent="true"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/button_background"
         android:onClick="btnscan"
@@ -21,10 +21,23 @@
         android:textColor="#fff" />
 
     <Button
+        android:id="@+id/btn_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button_background"
+        android:onClick="btnbar"
+        android:text="Scan Barcode"
+        android:textColor="#fff" />
+
+    <Button
         android:id="@+id/btn_gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_scan"
+        android:layout_below="@+id/btn_bar"
         android:layout_centerInParent="true"
         android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
