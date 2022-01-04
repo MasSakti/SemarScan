@@ -9,7 +9,7 @@
 [3]: https://www.instagram.com/mas.sakti_/
 [4]: https://github.com/MasSakti
 
-# Scan It!
+# Semar - Scan & Generate
 
 <img src="app/src/main/res/drawable-xxxhdpi/qrcodelogo.png" align="left"
 width="180" hspace="10" vspace="10">
